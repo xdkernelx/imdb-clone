@@ -2,6 +2,23 @@
 
 [Teachers' Project Briefs](https://docs.google.com/a/devbootcamp.com/document/d/1Kmw125hcNvyA_v4e35__TADi5NP88ELdhVfzPSlyAIc/edit?usp=sharing)
 
+*Film Review Site*
+
+A site where trusted reviewers can write reviews about films, other users can rate the reviews and talk about the reviews and the films.
+
+Key features:
+has users and authentication, some of whom are “trusted reviewers”
+has a public list of films
+each film has some reviews written only by trusted reviewers
+films belong to categories
+should be able to see the latest reviews, and the latest reviews by category
+users should be able to rate and comment on reviews
+users should be able to rate and comment on films
+
+Stretch ideas:
+admin access for reviewers on comments left on their reviews
+actors in films, and reviews for actors
+
 ### Learning Competencies
 
 - Interfacing with clients to determine the specification for building an application, in the form of user stories.
