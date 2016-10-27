@@ -1,7 +1,11 @@
 class FilmsController < ApplicationController
 
   def index
-    # @movies = Movie.all
+    @films = Film.all
+  end
+
+  def show
+
   end
 
 end
