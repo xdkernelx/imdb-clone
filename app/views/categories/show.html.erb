@@ -1,0 +1,4 @@
+<h1><%=@category.name%></h1>
+<h2><%@films.each do |film| %>
+<%= link_to film.name, film %><br>
+<%end %></h2>
