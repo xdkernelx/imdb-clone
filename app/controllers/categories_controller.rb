@@ -10,3 +10,5 @@ class CategoriesController < ApplicationController
   end
 
 end
+
+#test
