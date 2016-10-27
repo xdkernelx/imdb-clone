@@ -1,5 +1,10 @@
 <h1><%= @film.name %></h1>
-<%= link_to "Leave Review", new_film_review_path(@film)  %>
+<% if current_user %>
+  <%= link_to "Leave review", new_film_review_path(@film)  %>
+<% else %>
+  Want to leave a review? <%= link_to "Log in", new_user_session_path %>
+<% end %>
+
 <% @film.reviews.each do |review| %>
   <h3><%= review.title %></h3>
   <p><%= review.rating %></p>
