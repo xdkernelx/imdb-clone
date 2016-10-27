@@ -13,10 +13,10 @@ Category.create!([{name: 'Action'},
                               ])
 categories = Category.all
 
-Film.create!([{ name: 'Star Wars', category_id: '1'},
-                     { name: 'Lord of the Rings', category_id: '1' },
-                     { name: 'Star Wars', category_id: '1'},
-                     { name: 'Lord of the Rings', category_id: '1' },
+Film.create!([{ name: 'Star Wars I', category_id: '1'},
+                     { name: 'Lord of the Rings I', category_id: '1' },
+                     { name: 'Star Wars II', category_id: '1'},
+                     { name: 'Lord of the Rings II', category_id: '1' },
                      { name: 'Rocky Horror Picture Show', category_id: '2'},
                      { name: 'Titanic', category_id: '3' },
                      { name: 'Ghostbusters', category_id: '2' },
@@ -62,7 +62,7 @@ end
 end
 
 3.times do |i|
-    Review.create!(reviewer_id: 2,
+    Review.create!(reviewer_id: 16,
                    film_id: 6,
                    title: Faker::Team.name,
                    body: Faker::Lorem.paragraph,
