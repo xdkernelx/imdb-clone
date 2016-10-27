@@ -5,24 +5,18 @@ class CommentsController < ApplicationController
   #     @article = Article.find(params[:id])
   #   end
 
-  #   def new
-  #     @article = Article.new
-  #   end
+    def new
+      @comment = Comment.new
+    end
 
-  #   def edit
-
-  #   end
-
-  #   def create
-  #     @category = Category.find(params[:category_id])
-  #     @article = @category.articles.new(article_params)
-  #     if @article.save
-  #       redirect_to category_article_path(@category, @article)
-  #     else
-  #       p @article.errors
-  #       render 'show'
-  #     end
-  #   end
+    def create
+      @comment = Comment.new(comment_params)
+      if @comment.save
+        redirect_to '/films/1'
+      else
+        redirect_to '/'
+      end
+    end
 
   #   def update
   #     Article.new(article_params)
@@ -37,9 +31,9 @@ class CommentsController < ApplicationController
 
   #   end
 
-  #   private
+    private
 
-  #   def article_params
-  #     params.require(:article).permit(:title, :author, :body, :email, :category_id)
-  #   end
+    def comment_params
+      params.require(:comment).permit(:text, :review_id, :commenter_id)
+    end
 end
