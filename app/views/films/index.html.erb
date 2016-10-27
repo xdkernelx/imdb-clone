@@ -1,14 +1,14 @@
 <h1>Filmster</h1>
 <% if user_signed_in? %>
 <h2> Hello, <%= current_user.first_name %> </h2>
-	<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+	<%= link_to "Logout", destroy_user_session_path, class: "top-bar", :method => :delete %>
 <% else %>
-	<%= link_to "Login", new_user_session_path %><br>
-	<%= link_to "Register", new_user_registration_path %>
+	<%= link_to "Login", new_user_session_path, class: "top-bar" %><br>
+	<%= link_to "Register", new_user_registration_path, class: "top-bar" %>
 <% end %>
 
-<%= link_to "Recent Reviews", reviews_path%>
-<%= link_to "Film Categories", categories_path%>
+<%= link_to "Recent Reviews", reviews_path, class: "top-bar" %>
+<%= link_to "Film Categories", categories_path, class: "top-bar" %>
 
 <%= form_tag(films_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
@@ -19,5 +19,6 @@
 <h2>Recently Reviewed Films </h2>
 
 <% @films.each do |film| %>
-  <%= link_to film.name, film_path(film) %>
+  <div class="film-container">
+  <%= link_to film.name, film_path(film), class: "film-index" %>
 <% end %>
