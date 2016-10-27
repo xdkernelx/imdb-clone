@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "filmster_development"[0m
   [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "filmster_test"[0m
   [1m[35m (664.7ms)[0m  [1m[35mCREATE DATABASE "filmster_development" ENCODING = 'unicode'[0m
@@ -6028,3 +6029,5 @@ app/views/reviews/index.html.erb:1:in `_app_views_reviews_index_html_erb__628053
   Rendering /Users/mallorywood/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/mallorywood/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
   Rendered /Users/mallorywood/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.7ms)
+=======
+>>>>>>> ca98f6bac75b06de3bda379fecaed86724794546
