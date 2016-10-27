@@ -5,4 +5,8 @@ class Film < ApplicationRecord
 
   validates :name, :category_id, { presence: true }
 
+  def trusted_users
+    self.reviewers.where(trusted: true)
+  end
+
 end

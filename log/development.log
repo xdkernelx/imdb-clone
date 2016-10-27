@@ -1279,3 +1279,32 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT id, email, first_name, last_name FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT id, email, first_name, last_name, trusted FROM "users"[0m
+  [1m[36mFilm Load (29.6ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  [1m[36mFilm Load (8.8ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (26.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1[0m  [["reviewer_id", 2]]
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewer_id" = $1[0m  [["reviewer_id", 1]]
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFilm Load (0.5ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFilm Load (0.4ms)[0m  [1m[34mSELECT  "films".* FROM "films" WHERE "films"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFilm Load (0.5ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  [1m[36mFilm Load (0.6ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  [1m[36mFilm Load (0.5ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1 AND "users"."trusted" = $2[0m  [["film_id", 1], ["trusted", true]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 5]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 7]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 9]]
+  [1m[35m (46.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "films"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."reviewer_id" WHERE "reviews"."film_id" = $1[0m  [["film_id", 10]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
