@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root "films#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :categories
+  resources :comments
   resources :reviews, only: [:index]
   resources :films do
     resources :reviews
