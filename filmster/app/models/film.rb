@@ -3,11 +3,6 @@ class Film < ApplicationRecord
   has_many :reviews
   has_many :reviewers, through: :reviews, foreign_key: 'reviewer_id'
 
-
-
-
-
-
-
+  validates :name, :category_id. { presence: true }
 
 end
