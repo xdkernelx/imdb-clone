@@ -3,13 +3,6 @@ class Category < ApplicationRecord
   has_many :reviews, through: :films
   # has_many :comments, through: :reviews, source: :
 
-
-
-
-
-
-
-
-
+  validates :name, { presence: true }
 
 end
