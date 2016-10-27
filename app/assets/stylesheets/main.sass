@@ -1,8 +1,9 @@
+@import "bootstrap"
 $background: #0D1F2D
 $primary-color: #546A7B
 $font-stack: Arial, Helvetica
 $font-color: #444054
-
+$font-hover: #160E21
 
 html,
 body,
@@ -11,24 +12,33 @@ ol
   font: 100% $font-stack
   padding: 15px
 
+p
+  font-size: 24px
+  color: green
+
 h1
   font: 100% $font-stack
   font-size: 30px
 
-.top-bar
+#film-container
+  width: 90%
+
+.film
+  width: 30%
+  height: 50%
+  background-color: $font-color
+  margin: 5px
+
+
+#top-nav
   font: 100% $font-stack
   font-color: $font-color
+  text-decoration: none
 
-
-.message
-  border: 1px solid #ccc
-  padding: 5px
-
-
-.success
-  @extend .message
-  color: green
-
-.warning
-  @extend .message
-  color: red
+.top-bar.hover
+  font-color: yellow
+  text-decoration: underline
+a
+  font: 100% $font-stack
+  font-color: $font-hover
+  text-decoration: none
