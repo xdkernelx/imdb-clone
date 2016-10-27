@@ -20,7 +20,6 @@
     <%= form_for :comment, url: comments_path do |f| %>
       <%= f.text_field :text %>
       <%= f.hidden_field :review_id, value: review.id %>
-      <%= f.hidden_field :commenter_id, value: review.reviewer.id %>
       <%= f.submit %>
     <% end %>
 <% end %>

@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
     end
 
     def create
+      params[:comment][:commenter_id] = current_user.id
       @comment = Comment.new(comment_params)
       if @comment.save
         redirect_to '/films/1'
