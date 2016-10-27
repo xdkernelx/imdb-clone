@@ -1,10 +1,5 @@
 class CommentsController < ApplicationController
 
-  # def show
-  #     @category = Category.find(params[:category_id])
-  #     @article = Article.find(params[:id])
-  #   end
-
     def new
       @comment = Comment.new
     end
@@ -19,19 +14,6 @@ class CommentsController < ApplicationController
         redirect_to '/'
       end
     end
-
-  #   def update
-  #     Article.new(article_params)
-  #     if Article.save
-  #       redirect_to '/'
-  #     else
-  #       render 'show'
-  #     end
-  #   end
-
-  #   def destroy
-
-  #   end
 
     private
 
