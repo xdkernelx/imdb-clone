@@ -6,10 +6,16 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @film = Film.find(params[:film_id])
   end
 
   def create
     @review = Review.create(params)
+  end
+
+  def post
+    puts "*****"
+    p params
   end
 
 end
