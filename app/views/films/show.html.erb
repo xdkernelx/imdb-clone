@@ -11,7 +11,11 @@
   <p><%= review.body %></p>
   <p><%= review.reviewer.first_name %> <%= review.reviewer.last_name %></p>
   <ul>
-
+    <% review.comments.each do |comment| %>
+      <li>
+        <%= comment.text %>
+      </li>
+    <% end %>
   </ul>
     <%= form_for :comment, url: comments_path do |f| %>
       <%= f.text_field :text %>
