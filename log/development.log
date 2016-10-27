@@ -1279,3 +1279,55 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-10-27 10:10:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (45.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FilmsController#index as HTML
+  Rendering films/index.html.erb within layouts/application
+  Rendered films/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 374ms (Views: 343.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-10-27 10:10:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (670.8ms)
+Completed 200 OK in 799ms (Views: 693.1ms | ActiveRecord: 77.5ms)
+
+
+  [1m[36mFilm Load (76.3ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+  [1m[36mFilm Load (7.1ms)[0m  [1m[34mSELECT  "films".* FROM "films" ORDER BY "films"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFilm Load (0.5ms)[0m  [1m[34mSELECT  "films".* FROM "films" ORDER BY "films"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "films" WHERE "films"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFilm Load (0.7ms)[0m  [1m[34mSELECT "films".* FROM "films"[0m
+Started GET "/users/sign_in" for ::1 at 2016-10-27 10:55:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (521.6ms)
+Completed 500 Internal Server Error in 800ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "$background ": expected ":", was "= #0D1F2D"):
+    4:     <title>Filmster</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/main.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__234273886621896166_70175415978240'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.8ms)

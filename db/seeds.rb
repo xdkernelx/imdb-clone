@@ -13,7 +13,7 @@ Category.create!([{name: 'Action'},
                               ])
 categories = Category.all
 
-Film.create!([{ name: 'Star Wars', category_id: '1'},
+Film.create!([
                      { name: 'Lord of the Rings', category_id: '1' },
                      { name: 'Star Wars', category_id: '1'},
                      { name: 'Lord of the Rings', category_id: '1' },
