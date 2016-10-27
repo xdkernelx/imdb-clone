@@ -13,11 +13,12 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.film_id = params[:film_id]
     @review.reviewer_id = current_user.id
+    @film = Film.find(params[:film_id])
     if @review.save
-      redirect_to film_path(Film.find(params[:film_id]))
+      redirect_to film_path(@film)
     else
       @errors = @review.errors.full_messages
-
+      render :new
     end
   end
 
