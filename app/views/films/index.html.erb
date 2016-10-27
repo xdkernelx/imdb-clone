@@ -1,6 +1,8 @@
 <h1>Filmster</h1>
+<nav id="top-nav">
 <% if user_signed_in? %>
 <h2> Hello, <%= current_user.first_name %> </h2>
+
 	<%= link_to "Logout", destroy_user_session_path, class: "top-bar", :method => :delete %>
 <% else %>
 	<%= link_to "Login", new_user_session_path, class: "top-bar" %><br>
@@ -14,11 +16,16 @@
 <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
 <%= submit_tag "Search" %>
 <% end %>
-
+</nav>
 
 <h2>Recently Reviewed Films </h2>
-
+<div class="container-fluid film-container">
+<div class='film-container'>
 <% @films.each do |film| %>
-  <div class="film-container">
-  <%= link_to film.name, film_path(film), class: "film-index" %>
+  <div class='col-md-4 film'>
+  <%= link_to film.name, film_path(film) %>
+  <p>more stuff down here</p>
+  </div>
 <% end %>
+</div>
+</div>
