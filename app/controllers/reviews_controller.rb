@@ -10,12 +10,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.create(params)
-  end
-
-  def post
     puts "*****"
     p params
+    # @review = Review.create(params)
   end
+
+  # def post
+  #   puts "*****"
+  #   p params
+  # end
 
 end
