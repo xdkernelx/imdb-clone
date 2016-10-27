@@ -10,14 +10,21 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    puts "*****"
-    p params
-    # @review = Review.create(params)
+    @review = Review.new(review_params)
+    @review.film_id = params[:film_id]
+    @review.reviewer_id = current_user.id
+    if @review.save
+      redirect_to film_path(Film.find(params[:film_id]))
+    else
+      @errors = @review.errors.full_messages
+
+    end
   end
 
-  # def post
-  #   puts "*****"
-  #   p params
-  # end
+  private
+
+  def review_params
+    params.require(:review).permit(:title, :body, :rating)
+  end
 
 end
