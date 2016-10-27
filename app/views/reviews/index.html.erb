@@ -1,3 +1,6 @@
-<h1><% @reviews.each do |review| %></h1>
-<%= link_to review.title, film_path %><br>
+<% @reviews.each do |review| %>
+<h1><%=link_to review.film.name, film_path(review.film)%> </h1>
+	<h3><%= review.title%></h3><br>
+	<%= review.rating %><br><br>
+	<p><%= review.body%></p><br>
 <%end %>
