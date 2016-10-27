@@ -1,0 +1,9 @@
+<h3>New Review Page</h3>
+<%= form_for @review do |f| %>
+  <%= f.text_field :title, placeholder: 'Title' %><br/><br/>
+  <%= f.text_area :body, placeholder: "Your thoughts" %>
+  Pick a rating!
+  <%= f.select :rating, ['5','4','3','2','1'] %>
+  <%= f.submit %>
+<% end %>
+
