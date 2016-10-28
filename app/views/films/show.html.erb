@@ -1,3 +1,22 @@
+<script type="text/javascript">
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+</script>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">The Pros</a></li>
+    <li><a href="#tabs-2">The People</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>This is a thing wow</p>
+  </div>
+  <div id="tabs-2">
+    <p>This is a thing too</p>
+  </div>
+</div>
+
 <h1><%= @film.name %></h1>
 <% if current_user %>
   <%= link_to "Leave review", new_film_review_path(@film)  %>
