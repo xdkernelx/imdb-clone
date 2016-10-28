@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
     def create
       film_id = params[:comment][:film_id].to_s
       filmRoute = '/films/' + film_id
-      p params
       @comment = Comment.new(comment_params)
       if @comment.save
         redirect_to filmRoute
