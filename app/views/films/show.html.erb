@@ -18,7 +18,6 @@
     <% end %>
   </ul>
 
-  <% params[:review_id] = review.id %>
-  <%= render 'comments/form' %>
+  <%= render 'comments/form', locals: { review_id: review.id } %>
 
 <% end %>
