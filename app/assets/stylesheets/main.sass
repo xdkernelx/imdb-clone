@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow')
 $background: #F3EFF5
 $primary-color: #929BB5
-$font-stack: Arial, Helvetica
+$font-stack: "Arial Black", Gadget, sans-serif
 $header-font: Impact, Charcoal, sans-serif
 $font-color: #253031
 $font-hover: #315659
@@ -13,7 +13,7 @@ html,
 body,
 ul,
 ol
-  font: 100% $google-font
+  font: 100% $header-font
   padding: 15px
 
 p
@@ -28,12 +28,30 @@ h1
   font: 100% $header-font
   font-size: 30px
 
+#filmster
+  font: 100% $header-font
+  font-size: 30px
+  text-decoration: none
+  color: black
+
+.words
+  font: 100% $font-stack
+
 input
   padding: 5px
+
 #bar
   display: flex
   background-color: $background
   justify-content: space-between
+  align-items: center
+  // padding-top: 10px
+  padding-left: 10px
+  padding-right: 10px
+  border-radius: 3px
+
+.form-group
+  margin-top: 12px
 
 #film-container
   width: 90%
@@ -50,9 +68,57 @@ input
   height: 50%
   background-color: $background
   margin: 5px
+  padding: 20px
+  padding-top: 24px
+  display: flex
+  justify-content: center
   -webkit-box-shadow: $box-shadow
   -moz-box-shadow: $box-shadow
   box-shadow: $box-shadow
+  border-radius: 3px
+
+.Titanic
+  background-image: url(/assets/titanic.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Ghostbusters
+  background-image: url(/assets/ghostbusters.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Star
+  background-image: url(/assets/star_wars.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Pulp
+  background-image: url(/assets/pulp_fiction.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Rocky
+  background-image: url(/assets/rocky_horror.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Dark
+  background-image: url(/assets/dark_knight.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Lord
+  background-image: url(/assets/lord_rings.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.Shawshank
+  background-image: url(/assets/shawshank.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+
+.film-name
+  color: white
 
 .padding
   padding: 20px
