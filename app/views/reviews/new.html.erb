@@ -1,3 +1,5 @@
+<div class="review">
+<div class="padding">
 <h3>New <%= @film.name %> Review</h3>
 <% if @errors %>
   <% @errors.each do |error| %>
@@ -8,7 +10,8 @@
   <%= f.text_field :title, placeholder: 'Title' %><br/><br/>
   <%= f.text_area :body, placeholder: "Your thoughts" %>
   Pick a rating!
-  <%= f.select :rating, ['5','4','3','2','1'] %>
+  <%= f.select :rating, ['5','4','3','2','1'] %><br/><br/>
   <%= f.submit %>
 <% end %>
-
+</div>
+</div>
