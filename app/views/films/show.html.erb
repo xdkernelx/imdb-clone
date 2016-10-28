@@ -9,31 +9,19 @@
 <% @film.reviews.each do |review| %>
   <div class="review-show">
     <div class="padding">
-      <h3>
-        <%= review.title %>
-      </h3>
-      <p>
-        <img src="/assets/star-full.png" alt="rss feed" />
-        <%= img src="/assets/star-full.png" %>
-      </p>
-      <p class='comment-body'>
-        <%= review.body %>
-      </p>
-      <br />
-      <span class='author'>- <%= review.reviewer.first_name %> <%= review.reviewer.last_name %></span>
+      <h3><%= review.title %></h3>
+      <p><%= review.rating %></p>
+      <p class="words"><%= review.body %></p>
+      <p class="words"><%= review.reviewer.first_name %> <%= review.reviewer.last_name %></p>
       <ul>
-        <br />
-        Comments:
-        <br />
         <% review.comments.each do |comment| %>
-          <li class='comment'>
-            <span class='author'><%= comment.commenter.first_name %> <%= comment.commenter.last_name %></span>
-             - <%= comment.text %>
+          <li class="words">
+            <%= comment.text %>
           </li>
         <% end %>
       </ul>
-
-      <%= render 'comments/form', locals: { review_id: review.id } %>
+      <% params[:reviewer_id] = review.id %>
+      <%= render 'comments/form' %>
     </div>
   </div>
 <% end %>
