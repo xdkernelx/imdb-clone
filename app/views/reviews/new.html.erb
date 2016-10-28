@@ -5,5 +5,15 @@
   <% end %>
 <% end %>
 
-<%= render 'reviews/form' %>
+<div class="review">
+<div class="padding">
+<%= form_for @review, url: film_reviews_path(@film) do |f| %>
+  <%= f.text_field :title, placeholder: 'Title' %><br/><br/>
+  <%= f.text_area :body, placeholder: "Your thoughts" %>
+  Pick a rating!
+  <%= f.select :rating, ['5','4','3','2','1'] %><br/><br/>
+  <%= f.submit %>
+<% end %>
+</div>
+</div>
 

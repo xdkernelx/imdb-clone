@@ -1,20 +1,10 @@
 <% @reviews.each do |review| %>
-	<h1><%=link_to review.film.name, film_path(review.film)%> </h1>
-		<h3><%= review.title%></h3><br>
-		<%= review.rating %><br><br>
-		<p><%= review.body%></p><br>
+<h1><%=link_to review.film.name, film_path(review.film)%> </h1>
+  <div class="review-show">
+    <div class="padding">
+	  <h3><%= review.title%></h3><br>
+	  <%= review.rating %><br><br>
+	  <p><%= review.body%></p><br>
+    </div>
+  </div>
 <%end %>
-
-  <script type="text.javascript">
-  $( function() {
-    $( "#tabs" ).tabs();
-  } );
-  </script>
-
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">The Pros</a></li>
-		<li><a href="#tabs-2">The People</a></li>
-	</ul>
-</div>
-  
