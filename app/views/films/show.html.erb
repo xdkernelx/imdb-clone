@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
- 
+
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">The Pros</a></li>
@@ -35,6 +35,7 @@
       <%= render 'comments/form' %>
     </div>
   </div>
+  <% end %>
   <div id="tabs-2">
     <% @people_reviews.each do |review| %>
       <div class="review-show">
@@ -50,10 +51,13 @@
           </li>
           <% end %>
         </ul>
-      
+
         <%= render 'comments/form', locals: { review_id: review.id } %>
         </div>
         </div>
       <% end %>
   </div>
 </div>
+</div>
+
+
