@@ -14,7 +14,7 @@
       </h3>
       <p>
         <img src="/assets/star-full.png" alt="rss feed" />
-        <%= img src="/assets/star-full.png" %>
+
       </p>
       <p class='comment-body'>
         <%= review.body %>
@@ -32,8 +32,8 @@
           </li>
         <% end %>
       </ul>
-
-      <%= render 'comments/form', locals: { review_id: review.id } %>
+      <% params[:review_id] = review.id %>
+      <%= render 'comments/form' %>
     </div>
   </div>
 <% end %>
