@@ -2,6 +2,7 @@ class FilmsController < ApplicationController
 
   def index
     @films = Film.all
+    @categories = Category.all
   end
 
   def show
