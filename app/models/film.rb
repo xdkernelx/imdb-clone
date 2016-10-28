@@ -13,6 +13,22 @@ class Film < ApplicationRecord
     self.reviewers.where(trusted: false)
   end
 
+  def trusted_reviews
+
+    total_reviews = self.reviews
+    trusted_reviews = total_reviews.select { |review| review.reviewer.trusted == true }
+
+    return trusted_reviews
+  end
+
+  def regular_reviews
+
+    total_reviews = self.reviews
+    regular_reviews = total_reviews.select { |review| review.reviewer.trusted == false }
+
+    return regular_reviews
+  end
+
   def trusted_rating
     result = 0
     if trusted_users.length > 0
