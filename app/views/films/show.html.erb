@@ -21,13 +21,13 @@
       <div class="review-show">
       <div class="padding">
       <h3><%= review.title %></h3>
-      <p><% review.rating.times do %>
+      <p>
+        <% review.rating.times do %>
           <%= image_tag("/assets/star-full.png", :alt => "Full Star") %>
         <% end %>
         <% (5 - review.rating).times do %>
           <%= image_tag("/assets/star-empty.png", :alt => "Full Star") %>
         <% end %>
-
       </p>
       <p class="words"><%= review.body %></p>
       <p class="words"><%= review.reviewer.first_name %> <%= review.reviewer.last_name %></p>
