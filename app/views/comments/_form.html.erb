@@ -1,7 +1,9 @@
-<%= form_for :comment, url: comments_path do |f| %>
-  <%= f.text_field :text %>
-  <%= f.hidden_field :film_id, value: params[:film_id] %>
-  <%= f.hidden_field :review_id, value: params[:review_id] %>
-  <%= f.hidden_field :commenter_id, value: current_user.id %>
-  <%= f.submit %>
+<% if current_user %>
+  <%= form_for :comment, url: comments_path do |f| %>
+    <%= f.text_field :text %>
+    <%= f.hidden_field :film_id, value: @film.id %>
+    <%= f.hidden_field :review_id, value: params[:review_id] %>
+    <%= f.hidden_field :commenter_id, value: current_user.id %>
+    <%= f.submit %>
+  <% end %>
 <% end %>
