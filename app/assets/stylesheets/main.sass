@@ -1,25 +1,34 @@
 @import "bootstrap"
-$background: #0D1F2D
-$primary-color: #546A7B
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow')
+$background: #F3EFF5
+$primary-color: #929BB5
 $font-stack: Arial, Helvetica
-$font-color: #444054
-$font-hover: #160E21
-$box-shadow:
+$header-font: Impact, Charcoal, sans-serif
+$font-color: #253031
+$font-hover: #315659
+$box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.1)
+$google-font: 'Open Sans Condensed', sans-serif
 
 html,
 body,
 ul,
 ol
-  font: 100% $font-stack
+  font: 100% $google-font
   padding: 15px
 
 p
   font-size: 24px
-  color: green
+  color: $font-color
+
+#bar
+  display: flex
+  background-color: $background
+  justify-content: space-between
 
 h1
-  font: 100% $font-stack
+  font: 100% $header-font
   font-size: 30px
+
 
 #film-container
   width: 90%
@@ -27,9 +36,14 @@ h1
 .film
   width: 30%
   height: 50%
-  background-color: $font-color
+  background-color: $background
   margin: 5px
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
 
+#search-form
+  width: 30%
 
 #top-nav
   font: 100% $font-stack
