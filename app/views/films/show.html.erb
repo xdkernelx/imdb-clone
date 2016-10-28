@@ -5,18 +5,12 @@
   Want to leave a review? <%= link_to "Log in", new_user_session_path %>
 <% end %>
 
-<!jQuery UI tab code>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 <div id="tabs">
   <ul>
-    <li><a href="#tabs-1">The Pros</a></li>
-    <li><a href="#tabs-2">The People</a></li>
+    <li><a href="#fragment-1">The Pros</a></li>
+    <li><a href="#fragment-2">The People</a></li>
   </ul>
-  <div id="tabs-1">
+  <div id="fragment-1">
     <% @trusted_reviews.each do |review| %>
       <div class="review-show">
       <div class="padding">
@@ -41,9 +35,10 @@
       <% params[:review_id] = review.id %>
       <%= render 'comments/form' %>
     </div>
-  </div>
+    </div>
+    </div>
   <% end %>
-  <div id="tabs-2">
+  <div id="fragment-2">
     <% @people_reviews.each do |review| %>
       <div class="review-show">
       <div class="padding">
@@ -65,11 +60,14 @@
           </li>
           <% end %>
         </ul>
-
-        <%= render 'comments/form', locals: { review_id: review.id } %>
+        <% params[:review_id] = review.id %>
+        <%= render 'comments/form' %>
         </div>
         </div>
       <% end %>
   </div>
 </div>
 </div>
+<script>
+  $( "#tabs" ).tabs({collapsible: true});
+</script>
