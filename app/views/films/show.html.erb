@@ -13,18 +13,21 @@
         <%= review.title %>
       </h3>
       <p>
-        <%= "*" * review.rating %>
+        <img src="/assets/star-full.png" alt="rss feed" />
+        <%= img src="/assets/star-full.png" %>
       </p>
-      <p>
+      <p class='comment-body'>
         <%= review.body %>
       </p>
-      <p>
-        <%= review.reviewer.first_name %> <%= review.reviewer.last_name %>
-      </p>
+      <br />
+      <span class='author'>- <%= review.reviewer.first_name %> <%= review.reviewer.last_name %></span>
       <ul>
+        <br />
+        Comments:
+        <br />
         <% review.comments.each do |comment| %>
           <li class='comment'>
-            <span class='commenter'><%= comment.commenter.first_name %> <%= comment.commenter.last_name %></span>
+            <span class='author'><%= comment.commenter.first_name %> <%= comment.commenter.last_name %></span>
              - <%= comment.text %>
           </li>
         <% end %>
