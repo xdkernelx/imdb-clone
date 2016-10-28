@@ -11,6 +11,15 @@
     <li><a href="#fragment-2">The People</a></li>
   </ul>
   <div id="fragment-1">
+    <p>
+      Average Rating:
+    </p>
+    <% @film.trusted_rating.to_i.times do %>
+      <%= image_tag("/assets/star-full.png", :alt => "Full Star") %>
+    <% end %>
+    <% (5 - @film.trusted_rating.to_i).times do %>
+      <%= image_tag("/assets/star-empty.png", :alt => "Full Star") %>
+    <% end %>
     <% @trusted_reviews.each do |review| %>
       <div class="review-show">
         <div class="padding">
@@ -39,6 +48,15 @@
     <% end %>
   </div>
   <div id="fragment-2">
+    <p>
+      Average Rating:
+    </p>
+    <% @film.regular_rating.to_i.times do %>
+      <%= image_tag("/assets/star-full.png", :alt => "Full Star") %>
+    <% end %>
+    <% (5 - @film.regular_rating.to_i).times do %>
+      <%= image_tag("/assets/star-empty.png", :alt => "Full Star") %>
+    <% end %>
     <% @people_reviews.each do |review| %>
       <div class="review-show">
         <div class="padding">
@@ -51,11 +69,11 @@
               <%= image_tag("/assets/star-empty.png", :alt => "Full Star") %>
             <% end %>
           </p>
-          <p><%= review.body %></p>
-          <p><%= review.reviewer.first_name %> <%= review.reviewer.last_name %></p>
+          <p class="words"><%= review.body %></p>
+          <p class="words"><%= review.reviewer.first_name %> <%= review.reviewer.last_name %></p>
           <ul>
             <% review.comments.each do |comment| %>
-              <li>
+              <li class="words">
                 <%= comment.text %>
               </li>
               <% end %>
